@@ -11,4 +11,19 @@ class PostController extends Controller
         $ShowAllPost = Http::get('https://jsonplaceholder.typicode.com/posts');
         return $ShowAllPost->json();
     }
+    public function ShowSinglePage($id){
+        $ShowSinglePage =  Http::get('https://jsonplaceholder.typicode.com/posts/'.$id);
+        return $ShowSinglePage->json();
+    }
+    public function addPost(){
+        $addPost =  Http::post('https://jsonplaceholder.typicode.com/posts/',[
+            'userId'=>4,
+            'title'=>'newpost',
+            'body'=>'newpost details',
+        ]);
+        return $addPost->json();
+    
+
+    }
+
 }
