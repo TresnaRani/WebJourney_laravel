@@ -13,3 +13,4 @@ Route::get('/posts',[PostController::class,'ShowAllPost']);
 Route::get('/posts/{id}',[PostController::class,'ShowSinglePage']);
 Route::get('/add-post',[PostController::class,'addPost']);
 Route::get('/edit-post/{id}',[PostController::class,'editPost']);
+Route::get('/delete-post/{id}',[PostController::class,'deletePost']);

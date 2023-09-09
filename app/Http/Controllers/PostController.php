@@ -8,8 +8,12 @@ use Illuminate\Support\Facades\Http;
 class PostController extends Controller
 {
     public function ShowAllPost(){
-        $ShowAllPost = Http::get('https://jsonplaceholder.typicode.com/posts');
-        return $ShowAllPost->json();
+        $addPost =  Http::post('https://jsonplaceholder.typicode.com/posts/',[
+            'userId'=>4,
+            'title'=>'newpost',
+            'body'=>'newpost details',
+        ]);
+        return $addPost->json();
     }
     public function ShowSinglePage($id){
         $ShowSinglePage =  Http::get('https://jsonplaceholder.typicode.com/posts/'.$id);
@@ -24,8 +28,21 @@ class PostController extends Controller
         return $addPost->json();
     }
 
-    public function editPost(){
+    public function editPost($id){
+
+        $editPost =  Http::put('https://jsonplaceholder.typicode.com/posts/'.$id,[
+            'userId'=>4,
+            'title'=>'newpost updated',
+            'body'=>'newpost details updated',
+        ]);
+        return $editPost->json();
+    }
+
+    public function deletePost($id){
+        $deletePost =  Http::delete('https://jsonplaceholder.typicode.com/posts/'.$id);
+        return $deletePost->json();
         
+
     }
 
 }
