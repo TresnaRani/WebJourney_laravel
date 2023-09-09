@@ -22,8 +22,10 @@ class PostController extends Controller
             'body'=>'newpost details',
         ]);
         return $addPost->json();
-    
+    }
 
+    public function editPost(){
+        
     }
 
 }
