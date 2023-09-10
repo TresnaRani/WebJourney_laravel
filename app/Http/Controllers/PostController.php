@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class PostController extends Controller
 {
+    /*
     public function ShowAllPost(){
         $addPost =  Http::post('https://jsonplaceholder.typicode.com/posts/',[
             'userId'=>4,
@@ -44,5 +45,6 @@ class PostController extends Controller
         
 
     }
+    */
 
 }
