@@ -1,10 +1,12 @@
 <div>
-    
+    <h2>{{$header}}</h2>
+ <!----  
 <h2>Home</h2>
 <h2>About</h2>
 <h2>Contact</h2>
 <h2>Appoinment</h2>
 <h2>blog</h2>
+-> 
 
 
 
