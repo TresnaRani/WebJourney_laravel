@@ -19,7 +19,16 @@ Route::get('/delete-post/{id}',[PostController::class,'deletePost']);
 */
 Route::get('/',function(){
     $string = "we are learning laravel 9";
-    //$ucfirst = Str::ucfirst($string);
-    //echo $ucfirst."<br>";
-    return $string;
+    $ucFirst = Str::ucFirst($string);
+    echo $ucFirst."<br>";
+   // return $string;
+
+   $replaceFirst = Str::$replaceFirst("We","They",$string);
+   echo $replaceFirst."<br>";
+
+   $camel = Str::camel($string);
+   echo $camel."<br>";
 });
+
+Route::view('/about','about');
+Route::view('/contact','contact');
