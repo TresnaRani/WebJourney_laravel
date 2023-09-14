@@ -12,10 +12,18 @@ class Formcontroller extends Controller
 
     public function FormSubmit(Request $request){
         $rules = [
-            'name'=>'required|max:10',
+            'name'=>'required|max.10',
             'email'=>'required|email',
         ];
-        $this->validate($request,$rules);
+        
+        $customMessage =[
+            'name.required'=>'Enter your name',
+            'name.max'=>'max ch 10',
+            'email.required'=>'Enter your email',
+            'email.max'=>'Email must be valid',
+        ];
+        
+        $this->validate($request,$rules,$customMessage);
         return $request->all();
     }
 }
