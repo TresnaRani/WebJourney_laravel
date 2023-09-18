@@ -15,8 +15,7 @@ class PostTableSeeder extends Seeder
     {
         $posts = [
             ['id'=>'1','title'=>'post one','description'=>'des one'],
-            ['id'=>'2','title'=>'post one','description'=>'des two'],
-            ['id'=>'3','title'=>'post one','description'=>'des three'],
+            
         ];
         Post::insert($posts);
     }
