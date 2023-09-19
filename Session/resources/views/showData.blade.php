@@ -12,29 +12,20 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Title</th>
+      <th scope="col">Status</th>
+      <th scope="col">Description</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+   @foreach($posts as $key=>$post)
+   <tr>
+    <td>{{$key+1}}</td>
+    <td>{{$post->title}}</td>
+    <td>{{$post->status}}</td>
+    <td>{{$post->description}}</td>
+   </tr>
+   @endforeach
   </tbody>
 </table>
     
