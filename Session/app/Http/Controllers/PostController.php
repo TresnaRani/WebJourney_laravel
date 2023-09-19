@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function showData(){
-        return 'hlw';
+        return view('showData');
     }
 }
