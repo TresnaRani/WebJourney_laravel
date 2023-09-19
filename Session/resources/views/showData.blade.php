@@ -23,7 +23,7 @@
     <td>{{$key+1}}</td>
     <td>{{$post->title}}</td>
     <td>{{$post->status}}</td>
-    <td>{{$post->description}}</td>
+    <td>{{Str::limit($post->description,50)}}</td>
    </tr>
    @endforeach
   </tbody>
