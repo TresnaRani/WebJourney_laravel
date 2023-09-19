@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\PostController;
 
 
 
@@ -12,4 +13,6 @@ Route::get('/', function () {
 Route::get('/session/get',[SessionController::class,'getData']);
 Route::get('/session/store',[SessionController::class,'storeData']);
 Route::get('/session/destroy',[SessionController::class,'destroyData']);
+
+Route::get('/show-data',[PostController::class,'showData']);
 
