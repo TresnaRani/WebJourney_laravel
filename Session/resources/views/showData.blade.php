@@ -13,8 +13,9 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Title</th>
-      <th scope="col">Status</th>
       <th scope="col">Description</th>
+      <th scope= "col">Status</th>
+      <th scope="col">Create Date</th>
     </tr>
   </thead>
   <tbody>
@@ -22,11 +23,17 @@
    <tr>
     <td>{{$key+1}}</td>
     <td>{{$post->title}}</td>
-    <td>{{$post->status}}</td>
     <td>{{Str::limit($post->description,50)}}</td>
+    <td>{{$post->Status}}</td>
+    <td>
+        {{$post->created_at}}<br>
+        {{$post->created_at->toDateString()}}<br>
+        {{$post->created_at->toFormattedDateString()}}<br>
+        {{$post->created_at->toDayDateTimeString()}}<br>
    </tr>
    @endforeach
   </tbody>
+  {{$posts->links()}}
 </table>
     
 
