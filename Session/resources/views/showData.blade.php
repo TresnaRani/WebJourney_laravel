@@ -26,11 +26,14 @@
     <td>{{Str::limit($post->description,50)}}</td>
     <td>{{$post->Status}}</td>
     <td>
-        {{$post->created_at}}<br>
+        {{$post->created_at}}
+        <!-----
         {{$post->created_at->toDateString()}}<br>
         {{$post->created_at->toFormattedDateString()}}<br>
         {{$post->created_at->toDayDateTimeString()}}<br>
-   </tr>
+        --->
+   </td>
+</tr>
    @endforeach
   </tbody>
   {{$posts->links()}}
