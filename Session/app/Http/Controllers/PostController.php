@@ -18,4 +18,11 @@ class PostController extends Controller
     public function addData(){
         return view('addData');
     }
+    public function storeData(Request $request){    
+        if($request->isMethod('post')){
+            return 'ok';
+        }
+
+
+    }
 }

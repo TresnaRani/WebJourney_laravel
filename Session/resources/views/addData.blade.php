@@ -11,9 +11,11 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-sm-12">
-        <a href="{{url('create-data')}}" class="btn btn-success">Add</a>
+        <a href="{{url('add-data')}}" class="btn btn-success">Add Data</a>
      <br><br>
-
+    <form action="{{url('/store-data')}}" method="post">
+        @csrf
+   
      <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" class="form-control" placeholder="title">
@@ -28,7 +30,8 @@
      </div>
      <br>
      <button value="submit" class="btn btn-success">Create</button>
-</div>
+     </form>
+    </div>
     </div>
   </div>
     
