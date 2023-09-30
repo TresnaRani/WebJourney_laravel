@@ -14,4 +14,8 @@ class PostController extends Controller
         //return $posts;
        return view('showData',compact('posts'));
     }
+
+    public function addData(){
+        return view('addData');
+    }
 }

@@ -15,4 +15,5 @@ Route::get('/session/store',[SessionController::class,'storeData']);
 Route::get('/session/destroy',[SessionController::class,'destroyData']);
 
 Route::get('/show-data',[PostController::class,'showData']);
+Route::get('/add-data',[PostController::class,'addData']);
 
