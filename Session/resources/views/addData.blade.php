@@ -11,7 +11,7 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-sm-12">
-        <a href="{{url('add-data')}}" class="btn btn-success">Add Data</a>
+        <a href="{{url('show-data')}}" class="btn btn-success">ShowData</a>
      <br><br>
     <form action="{{url('/store-data')}}" method="post">
         @csrf
