@@ -8,6 +8,11 @@
 
 </head>
 <body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <a href="{{url('add-data')}}" class="btn btn-success">Add data</a>
+     <br><br>
 <table class="table">
   <thead>
     <tr>
@@ -27,17 +32,16 @@
     <td>{{$post->Status}}</td>
     <td>
         {{$post->created_at}}
-        <!-----
-        {{$post->created_at->toDateString()}}<br>
-        {{$post->created_at->toFormattedDateString()}}<br>
-        {{$post->created_at->toDayDateTimeString()}}<br>
-        --->
+       
    </td>
 </tr>
    @endforeach
   </tbody>
   {{$posts->links()}}
 </table>
+</div>
+    </div>
+  </div>
     
 
 
