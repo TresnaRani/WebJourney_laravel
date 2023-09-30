@@ -20,7 +20,7 @@
         <label for="title">Title:</label>
         <input type="text" class="form-control" placeholder="title">
         @error('title')
-        <span>{{$message}}</span>
+        <span class="text-danger">{{$message}}</span>
         @enderror
 
      </div>
@@ -35,9 +35,7 @@
      <div class="form-group mt-3">
         <label for="">CreateDate:</label>
         <input type="date" class="form-control" placeholder="setdate">
-        @error('title')
-        <span>{{$message}}</span>
-        @enderror
+  
     </div>
      <br>
      <button value="submit" class="btn btn-success">Create</button>
