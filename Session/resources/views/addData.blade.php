@@ -20,7 +20,7 @@
      </div>
      <div class="form-group">
         <label for="title">Description:</label>
-        <input type="text" class="form-control" placeholder="title">
+        <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
      </div>
      <div class="form-group">
         <label for="title">CreateDate:</label>
