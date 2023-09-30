@@ -19,15 +19,26 @@
      <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" class="form-control" placeholder="title">
+        @error('title')
+        <span>{{$message}}</span>
+        @enderror
+
      </div>
-     <div class="form-group">
-        <label for="title">Description:</label>
+     <div class="form-group mt-3">
+        <label for="">Description:</label>
         <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
-     </div>
-     <div class="form-group">
-        <label for="title">CreateDate:</label>
+     
+     @error('description')
+        <span class="text-danger">{{$message}}</span>
+        @enderror
+        </div>
+     <div class="form-group mt-3">
+        <label for="">CreateDate:</label>
         <input type="date" class="form-control" placeholder="setdate">
-     </div>
+        @error('title')
+        <span>{{$message}}</span>
+        @enderror
+    </div>
      <br>
      <button value="submit" class="btn btn-success">Create</button>
      </form>
