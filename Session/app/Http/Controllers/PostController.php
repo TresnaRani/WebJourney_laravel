@@ -38,7 +38,7 @@ class PostController extends Controller
             $post->title = $data['title'];
             $post->description = $data['description'];
             $post->save();
-            Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"]);
+            Toastr::success('Post successfully added', 'success', ["positionClass" => "toast-top-right","closeButton"=> "true","progressBar"=> "true",]);
             return redirect('/show-data');
         }
 

@@ -21,6 +21,7 @@
       <th scope="col">Description</th>
       <th scope= "col">Status</th>
       <th scope="col">Create Date</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -33,6 +34,10 @@
     <td>
         {{$post->created_at}}
        
+   </td>
+   <td>
+    <a href="">Edit</a>
+    <a href="">Delete</a>
    </td>
 </tr>
    @endforeach
