@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Toastr;
 
 class PostController extends Controller
 {
     public function showData(){
-        $posts = Post::simplepaginate(10);
+        $posts = Post::latest()->simplepaginate(10);
        // $posts= Post::get()->toArray();
         //echo "<pre>";print_r($posts);die;
         //return $posts;
@@ -37,6 +38,7 @@ class PostController extends Controller
             $post->title = $data['title'];
             $post->description = $data['description'];
             $post->save();
+            Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"]);
             return redirect('/show-data');
         }
 
