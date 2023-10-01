@@ -24,7 +24,7 @@ class PostController extends Controller
 
             $rules = [
                 'title'=>'required',
-                'description'=>'required'
+                'description'=>'required',
             ];
 
             $cm = [
@@ -33,7 +33,11 @@ class PostController extends Controller
 
             ];
             $this->validate($request,$rules,$cm);
-            return $data;
+            $post =new Post();
+            $post->title = $data['title'];
+            $post->description = $data['description'];
+            $post->save();
+            return redirect('/show-data');
         }
 
 

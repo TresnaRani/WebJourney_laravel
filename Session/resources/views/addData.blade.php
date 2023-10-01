@@ -18,7 +18,7 @@
    
      <div class="form-group">
         <label for="title">Title:</label>
-        <input type="text" class="form-control" placeholder="title">
+        <input type="text" name="title" class="form-control" placeholder="title">
         @error('title')
         <span class="text-danger">{{$message}}</span>
         @enderror
@@ -28,7 +28,7 @@
         <label for="">Description:</label>
         <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
      
-     @error('description')
+        @error('description')
         <span class="text-danger">{{$message}}</span>
         @enderror
         </div>
