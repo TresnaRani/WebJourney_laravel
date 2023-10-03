@@ -13,7 +13,7 @@
       <div class="col-sm-12">
         <a href="{{url('show-data')}}" class="btn btn-success">EditData</a>
      <br><br>
-    <form action="{{url('/store-data')}}" method="post">
+    <form action="{{url('/store-edit-data/'.$post->id)}}" method="post">
         @csrf
    
      <div class="form-group">

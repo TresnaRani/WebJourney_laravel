@@ -51,4 +51,30 @@ class PostController extends Controller
         $post=Post::findOrFail($id);
         return view('editData',compact('post'));
     }
+
+    public function storeEditData(Request $request,$id=null){    
+        if($request->isMethod('post')){
+            $data = $request->all();
+
+            $rules = [
+                'title'=>'required',
+                'description'=>'required',
+            ];
+
+            $cm = [
+                'title.required'=>'Post title is required',
+                'description.required'=>'Post description is required',
+
+            ];
+            $this->validate($request,$rules,$cm);
+            $post =Post::findOrFail($id);
+            $post->title = $data['title'];
+            $post->description = $data['description'];
+            $post->save();
+            Toastr::success('Post successfully updated', 'success', ["positionClass" => "toast-top-right","closeButton"=> "true","progressBar"=> "true",]);
+            return redirect('/show-data');
+        }
+
+
+    }
 }
