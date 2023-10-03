@@ -44,4 +44,10 @@ class PostController extends Controller
 
 
     }
+
+    //edit data
+
+    public function editData($id=null){
+        return view('editData');
+    }
 }
