@@ -19,4 +19,5 @@ Route::get('/add-data',[PostController::class,'addData']);
 Route::post('/store-data',[PostController::class,'storeData']);
 Route::get('/edit-data/{id}',[PostController::class,'editData']);
 Route::post('/store-edit-data/{id}',[PostController::class,'storeEditData']);
+Route::get('/delete-data/{id}',[PostController::class,'deleteData']);
 

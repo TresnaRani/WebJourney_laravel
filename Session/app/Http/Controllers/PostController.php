@@ -74,7 +74,12 @@ class PostController extends Controller
             Toastr::success('Post successfully updated', 'success', ["positionClass" => "toast-top-right","closeButton"=> "true","progressBar"=> "true",]);
             return redirect('/show-data');
         }
+}
 
-
+    public function deleteData($id=null){
+        Post::findOrFail($id)->delete();
+        Toastr::success('Post successfully deleted', 'success', ["positionClass" => "toast-top-right","closeButton"=> "true","progressBar"=> "true",]);
+        return redirect()-> back();
     }
+
 }
