@@ -11,14 +11,14 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-sm-12">
-        <a href="{{url('show-data')}}" class="btn btn-success">ShowData</a>
+        <a href="{{url('show-data')}}" class="btn btn-success">EditData</a>
      <br><br>
     <form action="{{url('/store-data')}}" method="post">
         @csrf
    
      <div class="form-group">
         <label for="title">Title:</label>
-        <input type="text" name="title" class="form-control" placeholder="title">
+        <input type="text" name="title" value="{{$post->title}}" class="form-control" placeholder="title">
         @error('title')
         <span class="text-danger">{{$message}}</span>
         @enderror
@@ -26,7 +26,7 @@
      </div>
      <div class="form-group mt-3">
         <label for="">Description:</label>
-        <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="description" id="" cols="30" rows="10" class="form-control">{{$post->description}}</textarea>
      
         @error('description')
         <span class="text-danger">{{$message}}</span>
@@ -38,7 +38,7 @@
   
     </div>
      <br>
-     <button value="submit" class="btn btn-success">Create</button>
+     <button value="submit" class="btn btn-success">Update</button>
      </form>
     </div>
     </div>

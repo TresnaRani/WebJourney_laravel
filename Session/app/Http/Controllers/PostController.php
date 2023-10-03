@@ -48,6 +48,7 @@ class PostController extends Controller
     //edit data
 
     public function editData($id=null){
-        return view('editData');
+        $post=Post::findOrFail($id);
+        return view('editData',compact('post'));
     }
 }
