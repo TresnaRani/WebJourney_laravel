@@ -32,9 +32,9 @@
     <td>{{Str::limit($post->description,50)}}</td>
     <td>
       @if($post->status==1)
-      <a href="" class="btn btn-sm btn-success">Active</a>
+      <a href="{{url('/change-status/'.$post->id)}}" class="btn btn-sm btn-success">Active</a>
       @else
-      <a href="" class="btn btn-sm btn-danger">Inactive</a>
+      <a href="{{url('/change-status/'.$post->id)}}" class="btn btn-sm btn-danger">Inactive</a>
       @endif
     </td>
     <td>

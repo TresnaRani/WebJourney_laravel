@@ -95,4 +95,10 @@ class PostController extends Controller
         return redirect()-> back();
     }
 
+    public function changeStatus($id){
+        $getStatus = Post::select('status')->where('id',$id)->first();
+        return $getStatus;
+
+    }
+
 }

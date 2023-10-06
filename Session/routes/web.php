@@ -22,4 +22,8 @@ Route::post('/store-edit-data/{id}',[PostController::class,'storeEditData']);
 Route::get('/delete-data/{id}',[PostController::class,'deleteData']);
 Route::get('/restore-data/{id}',[PostController::class,'restoreData']);
 Route::get('/parmanentDelete-data/{id}',[PostController::class,'pDeleteData']);
+Route::get('/change-status/{id}',[PostController::class,'changeStatus']);
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
