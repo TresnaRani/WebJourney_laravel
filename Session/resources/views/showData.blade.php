@@ -30,7 +30,13 @@
     <td>{{$key+1}}</td>
     <td>{{$post->title}}</td>
     <td>{{Str::limit($post->description,50)}}</td>
-    <td>{{$post->Status}}</td>
+    <td>
+      @if($post->status==1)
+      <a href="" class="btn btn-sm btn-success">Active</a>
+      @else
+      <a href="" class="btn btn-sm btn-danger">Inactive</a>
+      @endif
+    </td>
     <td>
         {{$post->created_at}}
        
