@@ -83,4 +83,16 @@ class PostController extends Controller
         return redirect()-> back();
     }
 
+    public function restoreData($id){
+        Post::withTrashed()->findOrFail($id)->restore();
+        Toastr::success('Post successfully restored', 'success', ["positionClass" => "toast-top-right","closeButton"=> "true","progressBar"=> "true",]);
+        return redirect()-> back();
+
+    }
+    public function pDeleteData($id=null){
+        Post::onlyTrashed()->findOrFail($id)->forceDelete();
+        Toastr::success('Post permanently deleted', 'success', ["positionClass" => "toast-top-right","closeButton"=> "true","progressBar"=> "true",]);
+        return redirect()-> back();
+    }
+
 }

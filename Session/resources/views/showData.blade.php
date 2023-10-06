@@ -48,7 +48,7 @@
     </div>
   </div>
 
-  //softdelete data 
+  {{-----//softdelete data ----}}
 
   <div class="container mt-5">
     <div class="row">
@@ -78,8 +78,8 @@
        
    </td>
    <td>
-    <a href="{{url('/edit-data/'.$post->id)}}" class="btn btn-sm btn-warning">Edit</a>
-    <a href="{{url('/delete-data/'.$post->id)}}" class="btn btn-sm btn-danger">Delete</a>
+    <a href="{{url('/restore-data/'.$post->id)}}" class="btn btn-sm btn-warning">Restore</a>
+    <a href="{{url('/parmanentDelete-data/'.$post->id)}}" class="btn btn-sm btn-danger">ParmanentDelete</a>
    </td>
 </tr>
    @endforeach
