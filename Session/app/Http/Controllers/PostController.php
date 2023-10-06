@@ -10,10 +10,11 @@ class PostController extends Controller
 {
     public function showData(){
         $posts = Post::latest()->simplepaginate(10);
+        $trashPosts = Post::onlyTrashed()->latest()->simplepaginate(10);
        // $posts= Post::get()->toArray();
         //echo "<pre>";print_r($posts);die;
         //return $posts;
-       return view('showData',compact('posts'));
+       return view('showData',compact('posts','trashPosts'));
     }
 
     public function addData(){

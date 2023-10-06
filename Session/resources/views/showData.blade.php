@@ -47,6 +47,49 @@
 </div>
     </div>
   </div>
+
+  //softdelete data 
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <a href="#" class="btn btn-success">Trash List</a>
+     <br><br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope= "col">Status</th>
+      <th scope="col">Create Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+   @foreach($trashPosts as $key=>$post)
+   <tr>
+    <td>{{$key+1}}</td>
+    <td>{{$post->title}}</td>
+    <td>{{Str::limit($post->description,50)}}</td>
+    <td>{{$post->Status}}</td>
+    <td>
+        {{$post->created_at}}
+       
+   </td>
+   <td>
+    <a href="{{url('/edit-data/'.$post->id)}}" class="btn btn-sm btn-warning">Edit</a>
+    <a href="{{url('/delete-data/'.$post->id)}}" class="btn btn-sm btn-danger">Delete</a>
+   </td>
+</tr>
+   @endforeach
+  </tbody>
+ 
+</table>
+</div>
+    </div>
+  </div>
+    
     
 
 
